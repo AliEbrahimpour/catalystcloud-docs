@@ -10,7 +10,7 @@ host_ip = socket.gethostbyname(host_name)
 
 @app.route("/")
 def hello_world():
-  return "Hello World! From Server : {} @ {}".format(host_name, host_ip)
+  return f"Hello World! From Server : {host_name} @ {host_ip}"
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0')
