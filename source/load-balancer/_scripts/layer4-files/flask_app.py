@@ -27,9 +27,9 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     if server_url is None:
-        return "Server : {} @ {}".format(host_name, host_ip)
+        return f"Server : {host_name} @ {host_ip}"
     else:
-        return "Welcome to {} @ {}".format(server_url, host_ip)
+        return f"Welcome to {server_url} @ {host_ip}"
 
 
 @app.route("/health")
